@@ -40,6 +40,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="tOx-eK-Z15"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -49,7 +50,7 @@
         <!--View Controller-->
         <scene sceneID="KuM-u0-Cvu">
             <objects>
-                <viewController id="gHO-mg-UmZ" sceneMemberID="viewController">
+                <viewController id="gHO-mg-UmZ" customClass="ViewController" customModule="click_Count" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YoG-tg-Qn7"/>
                         <viewControllerLayoutGuide type="bottom" id="ThR-0Z-OMv"/>
@@ -65,15 +66,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFa-2u-E1C">
-                                <rect key="frame" x="61" y="385" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="69" y="385" width="30" height="30"/>
+                                <state key="normal" title="plus"/>
+                                <connections>
+                                    <action selector="count_plus:" destination="gHO-mg-UmZ" eventType="touchUpInside" id="n1r-0S-XLM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spP-fT-bgv">
-                                <rect key="frame" x="208" y="385" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="212" y="385" width="38" height="30"/>
+                                <state key="normal" title="down"/>
+                                <connections>
+                                    <action selector="count_down:" destination="gHO-mg-UmZ" eventType="touchUpInside" id="AVo-dP-OMb"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyp-R5-1oU">
-                                <rect key="frame" x="119" y="176" width="88" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyp-R5-1oU">
+                                <rect key="frame" x="137" y="180" width="88" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -82,6 +89,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="count_number" destination="dyp-R5-1oU" id="KkR-kb-NkE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N2Y-VF-pWw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -105,6 +115,19 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" indicatorStyle="black" text="count画面のplusで加算downで減算" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="q3L-GZ-sQP">
+                                <rect key="frame" x="44" y="143" width="240" height="308"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiF-XO-cCC">
+                                <rect key="frame" x="143" y="459" width="34" height="30"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="push" id="yB9-O2-jJw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -112,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Zc-D2-hxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="386" y="1002"/>
+            <point key="canvasLocation" x="275" y="1176"/>
         </scene>
     </scenes>
 </document>
