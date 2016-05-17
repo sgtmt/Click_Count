@@ -34,16 +34,20 @@ class ViewController: UIViewController {
             count_number.textColor = UIColor.blackColor()
         }
     }
+    func result_event(){
+        count_number.text = String(a)
+
+    }
 
     @IBAction func count_plus(sender: AnyObject) {
         a+=1
         ten_count()
-        count_number.text = String(a)
-    }
+        result_event()
+            }
     @IBAction func count_down(sender: AnyObject) {
         a-=1
         downColor()
-        count_number.text = String(a)
+        result_event()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
