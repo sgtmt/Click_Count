@@ -20,7 +20,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Click_Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvA-8B-jic">
                                 <rect key="frame" x="114" y="87" width="93" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qt6-Ro-MqG">
@@ -31,10 +31,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOA-g3-8x3">
-                                <rect key="frame" x="145" y="328" width="30" height="30"/>
+                                <rect key="frame" x="145" y="350" width="30" height="30"/>
                                 <state key="normal" title="説明"/>
                                 <connections>
-                                    <segue destination="Gc8-vG-5I2" kind="modal" id="jbq-UX-qtb"/>
+                                    <segue destination="Gc8-vG-5I2" kind="modal" id="LcM-Ck-Zu0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -62,18 +62,18 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fr4-fg-fcI">
                                 <rect key="frame" x="137" y="71" width="53" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFa-2u-E1C">
-                                <rect key="frame" x="69" y="385" width="30" height="30"/>
+                                <rect key="frame" x="88" y="269" width="30" height="30"/>
                                 <state key="normal" title="plus"/>
                                 <connections>
                                     <action selector="count_plus:" destination="gHO-mg-UmZ" eventType="touchUpInside" id="n1r-0S-XLM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spP-fT-bgv">
-                                <rect key="frame" x="212" y="385" width="38" height="30"/>
+                                <rect key="frame" x="200" y="269" width="38" height="30"/>
                                 <state key="normal" title="down"/>
                                 <connections>
                                     <action selector="count_down:" destination="gHO-mg-UmZ" eventType="touchUpInside" id="AVo-dP-OMb"/>
@@ -82,9 +82,23 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyp-R5-1oU">
                                 <rect key="frame" x="137" y="180" width="88" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leC-uo-IJH">
+                                <rect key="frame" x="135" y="498" width="34" height="30"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <action selector="count_backBtn:" destination="gHO-mg-UmZ" eventType="touchUpInside" id="8Ka-ey-emO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1l-YS-cjS">
+                                <rect key="frame" x="146" y="330" width="35" height="30"/>
+                                <state key="normal" title="reset"/>
+                                <connections>
+                                    <action selector="reset_Btn:" destination="gHO-mg-UmZ" eventType="touchUpInside" id="VcN-Sk-6Zm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -100,7 +114,7 @@
         <!--View Controller-->
         <scene sceneID="6oP-8g-pSr">
             <objects>
-                <viewController id="Gc8-vG-5I2" sceneMemberID="viewController">
+                <viewController id="Gc8-vG-5I2" customClass="ViewController" customModule="click_Count" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mR6-9g-aDa"/>
                         <viewControllerLayoutGuide type="bottom" id="eId-ed-VM0"/>
@@ -112,7 +126,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="説明" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBF-Xn-6cY">
                                 <rect key="frame" x="147" y="83" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" indicatorStyle="black" text="count画面のplusで加算downで減算" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="q3L-GZ-sQP">
@@ -125,7 +139,7 @@
                                 <rect key="frame" x="143" y="459" width="34" height="30"/>
                                 <state key="normal" title="back"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="push" id="yB9-O2-jJw"/>
+                                    <action selector="backBtn:" destination="Gc8-vG-5I2" eventType="touchUpInside" id="JY2-ww-ml5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -135,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Zc-D2-hxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="275" y="1176"/>
+            <point key="canvasLocation" x="214" y="1204"/>
         </scene>
     </scenes>
 </document>
